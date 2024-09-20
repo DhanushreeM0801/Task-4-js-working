@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(tom.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 90%; 
+    max-width: 550px;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.input-field {
+    margin-bottom: 15px;
+}
+
+.input-field input,
+.select-button select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: rgb(240, 244, 244);
+    font-size: 16px;
+}
+
+.input-field input::placeholder,
+.select-button select {
+    color: white;
+}
+
+.radio-button {
+    margin-bottom: 15px;
+}
+
+.radio-button label {
+    color: white;
+}
+
+.radio-button input {
+    margin-left: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(113, 152, 219, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgb(253, 170, 62); 
+}
+
+p {
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .input-field input,
+    .select-button select {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 95%; 
+    }
+
+    h1 {
+        font-size: 1.2rem; 
+    }
+
+    button {
+        padding: 8px; 
+    }
+}
+
+</style>
+<body>
+    <div class="login-container">
+        <h1>Registration</h2>
+        <form>
+            <div class="input-field">
+                <input type="text" id="fname" name="fname" placeholder="First Name" required>
+            </div>
+            <div class="input-field">
+                <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+            </div>
+            <div class="input-field">
+                <input type="date" id="dob" name="dob" placeholder="Date Of Birth" required>
+            </div>
+            <div class="radio-button">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="other" value="other" required>
+                <label for="other">other</label>
+            </div>
+            <div class="input-field">
+                <input type="email" id="email" name="email" placeholder="Email Id" required>
+            </div>
+            <div class="input-field">
+                <input type="password" id="password" name="password" placeholder="password" required>
+            </div>
+            <div class="input-field">
+                <input type="number" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="select-button">
+                <select name="city" id="city" required>
+                    <option value="select city">Select City</option>
+                    <option value="Theni">Theni</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Dindigul">Dindigul</option>
+                </select>
+            </div>
+            <button type="submit">Register</button><br><br>
+            <div class="register-link">
+         <p>Already have an account? <a href="index.html">login</a></p>
+      </div>
+        </form>
+    </div>
